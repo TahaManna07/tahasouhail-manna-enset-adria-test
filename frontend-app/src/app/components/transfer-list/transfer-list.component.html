@@ -1,0 +1,54 @@
+<button (click)="addTransfer()">
+  Ajouter un transfer<mat-icon>add</mat-icon></button>
+
+
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+  <!-- Définissez vos colonnes ici -->
+  <ng-container matColumnDef="id">
+    <th mat-header-cell *matHeaderCellDef> ID </th>
+    <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="beneficiaryId">
+    <th mat-header-cell *matHeaderCellDef> ID Bénéficiaire </th>
+    <td mat-cell *matCellDef="let element"> {{element.beneficiaryId}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="ribSource">
+    <th mat-header-cell *matHeaderCellDef> RIB Source </th>
+    <td mat-cell *matCellDef="let element"> {{element.ribSource}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="montant">
+    <th mat-header-cell *matHeaderCellDef> Montant </th>
+    <td mat-cell *matCellDef="let element"> {{element.montant}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="description">
+    <th mat-header-cell *matHeaderCellDef> Description </th>
+    <td mat-cell *matCellDef="let element"> {{element.description}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="date">
+    <th mat-header-cell *matHeaderCellDef> Date </th>
+    <td mat-cell *matCellDef="let element"> {{element.date | date}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="type">
+    <th mat-header-cell *matHeaderCellDef> Type </th>
+    <td mat-cell *matCellDef="let element"> {{element.type}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="actions">
+    <th mat-header-cell *matHeaderCellDef> Actions </th>
+    <td mat-cell *matCellDef="let element">
+      <button (click)="editTransfer(element)">Modifier</button>
+      <button (click)="deleteTransfer(element.id)">Supprimer</button>
+    </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
+
+<mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" showFirstLastButtons></mat-paginator>

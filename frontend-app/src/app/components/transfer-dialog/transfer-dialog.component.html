@@ -1,0 +1,31 @@
+<h2 mat-dialog-title>{{ data ? 'Modifier Virement' : 'Ajouter Virement' }}</h2>
+<mat-dialog-content>
+  <mat-form-field>
+    <label>ID Bénéficiaire</label>
+    <input matInput [(ngModel)]="transfer.beneficiaryId" required>
+  </mat-form-field>
+  <mat-form-field>
+    <label>RIB Source</label>
+    <input matInput [(ngModel)]="transfer.ribSource" required>
+  </mat-form-field>
+  <mat-form-field>
+    <label>Montant</label>
+    <input matInput type="number" [(ngModel)]="transfer.montant" required>
+  </mat-form-field>
+  <mat-form-field>
+    <label>Description</label>
+    <input matInput [(ngModel)]="transfer.description" required>
+  </mat-form-field>
+  <mat-form-field>
+    <label>Date</label>
+    <input matInput type="date" [(ngModel)]="transfer.date" required>
+  </mat-form-field>
+  <mat-form-field>
+    <label>Type</label>
+    <input matInput [(ngModel)]="transfer.type" required>
+  </mat-form-field>
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">Annuler</button>
+  <button mat-button (click)="onSave()">Enregistrer</button>
+</mat-dialog-actions>

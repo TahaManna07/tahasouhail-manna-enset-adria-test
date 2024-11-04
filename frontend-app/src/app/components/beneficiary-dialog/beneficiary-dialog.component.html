@@ -1,0 +1,23 @@
+<h1 mat-dialog-title>{{ data ? 'Modifier Bénéficiaire' : 'Ajouter Bénéficiaire' }}</h1>
+<div mat-dialog-content>
+  <mat-form-field>
+    <label>Nom</label>
+    <input matInput [(ngModel)]="data.nom" required>
+  </mat-form-field>
+  <mat-form-field>
+    <label>Prénom</label>
+    <input matInput [(ngModel)]="data.prenom" required>
+  </mat-form-field>
+  <mat-form-field>
+    <label>RIB</label>
+    <input matInput [(ngModel)]="data.rib" required>
+  </mat-form-field>
+  <mat-form-field>
+    <label>Type</label>
+    <input matInput [(ngModel)]="data.type" required>
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">Annuler</button>
+  <button mat-button [mat-dialog-close]="data">Enregistrer</button>
+</div>

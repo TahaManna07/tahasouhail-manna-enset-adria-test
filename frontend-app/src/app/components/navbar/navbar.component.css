@@ -1,0 +1,16 @@
+nav {
+  background-color: #3f51b5; /* Couleur de fond */
+  color: white; /* Couleur du texte */
+  padding: 10px;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+}
+
+a.active {
+  font-weight: bold; /* Met en gras l'onglet actif */
+  text-decoration: underline; /* Souligne l'onglet actif */
+}
