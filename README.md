@@ -95,3 +95,13 @@ Ajoutez les captures d'écran dans le dossier `screenshots` de votre projet, et 
 2. Démarrez chaque service individuellement en utilisant les commandes suivantes :
    ```bash
    mvn spring-boot:run -Dspring-boot.run.profiles=[nom_du_service]
+
+### Testes ![modif list benfe](https://github.com/user-attachments/assets/ee579403-be0e-4c74-88fd-c32c74905020)
+![benifi list$](https://github.com/user-attachments/assets/b36f66dc-01e7-4f10-acfc-adea1ae8e247)
+![add viremnt](https://github.com/user-attachments/assets/4d3b2d6e-52e2-4b71-85a2-9c4774bded6f)
+![edit viremnt](https://github.com/user-attachments/assets/1d4cd8e9-9de8-4d74-992f-4650a2dc5bba)
+![virmen list](https://github.com/user-attachments/assets/467df034-9962-4b5c-be0e-87756cde6115)
+![add benfe](https://github.com/user-attachments/assets/b030fab7-bd82-42aa-8ed8-ef4bf955a391)
+pour la partie frontEnd : 
+
+
